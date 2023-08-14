@@ -1,0 +1,31 @@
+.hero {
+  height: 702px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("D:\Programs\Projects\cdac project\adv-inv-system-front-end\public\images\login-page.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.hero-outer {
+  background-color: rgb(0 0 0 / 26%);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-radius: 10px;
+}
+.login-form {
+  height: 300px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 38px 34px;
+  gap: 10px;
+  font-size: 21px;
+}
+
+.login-hihlighted:hover {
+background-color: #0000007d;
+}
+input{
+    height:27px;
+}
