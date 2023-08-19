@@ -1,10 +1,17 @@
-function DashboardPage(params) {
-        return (
-            <>
-                This is dashboard page.....
-                new line added....
-            </>
-        )
+import SideBar from "../components/sidebar";
+import Divider from "../layouts/divider";
+export default function DashboardPage(params) {
+  return (
+    <>
+      <SideBar />
+      <Divider
+        title={params.title}
+        component={
+          <>
+            
+          </>
+        }
+      />
+    </>
+  );
 }
-
-export default DashboardPage;

@@ -1,13 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DashboardPage from "../pages/dashboardPage";
 import LoginPage from "../pages/loginPage";
-import { useState } from "react";
+import InvoicePage from "../pages/invoicePage";
+import ClientPage from "../pages/clientsPage";
+import PaymentsPage from "../pages/paymentsPage";
+import ProductsPage from "../pages/productsPage";
 
 function RoutesIndex(params) {
   const routeObject = [
-    { name: "LoginPage", path: "/", component: <LoginPage />,params:[]},
-    { name: "LoginPage", path: "/login", component: <LoginPage />,params:[]},
-    { name: "DashboardPage", path: "/dashboard", component: <DashboardPage />},
+    { name: "LoginPage", path: "/", component: <LoginPage name={"LoginPage"} title={"Login Page"}/>,params:[]},
+    { name: "LoginPage", path: "/login", component: <LoginPage name={"LoginPage"} title={"Login Page"}/>,params:[]},
+    { name: "DashboardPage", path: "/dashboard", component: <DashboardPage title={"Dashboard Page"} />},
+    { name: "InvoicePage", path: "/invoices", component: <InvoicePage title={"Invoice Page"}/>},
+    { name: "ClientPage", path: "/clients", component: <ClientPage title={"Client Page"}/>},
+    { name: "PaymentsPage", path: "/payments", component: <PaymentsPage title={"Payments Page"}/>},
+    { name: "ProductsPage", path: "/products", component: <ProductsPage title={"Products Page"}/>},
    
   ];
 
