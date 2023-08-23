@@ -1,7 +1,7 @@
 import "../assets/styles/Card/card.css"
 function Card(params) {
     return(
-        <div class="card">
+        <div class="card" style={{backgroundColor:`${params.color}`}}>
             <div class="title">
                 <span>
                     <svg width="20" fill="currentColor" height="20" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -10,13 +10,13 @@ function Card(params) {
                     </svg>
                 </span>
                 <p class="title-text">
-                    Sales
+                    {params?.data[1]}
                 </p>
                 
             </div>
             <div class="data">
                 <p>
-                    39,500 
+                {params?.data[0]}
                 </p>
                 
                 

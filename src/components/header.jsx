@@ -5,7 +5,7 @@ import "../assets/styles/Header/header.css";
 function Header(params) {
   return (
     <>
-      <div className="header_wrapper">
+      <div className="header_wrapper" style={{backgroundColor:`${params?.color}`}}>
         <div className="header_title">
           {params.title}
         </div>

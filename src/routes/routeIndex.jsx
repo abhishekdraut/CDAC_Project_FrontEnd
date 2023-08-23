@@ -5,6 +5,7 @@ import InvoicePage from "../pages/invoicePage";
 import ClientPage from "../pages/clientsPage";
 import PaymentsPage from "../pages/paymentsPage";
 import ProductsPage from "../pages/productsPage";
+import SignUpPage from "../pages/signupPage";
 
 function RoutesIndex(params) {
   const routeObject = [
@@ -15,6 +16,7 @@ function RoutesIndex(params) {
     { name: "ClientPage", path: "/clients", component: <ClientPage title={"Client Page"}/>},
     { name: "PaymentsPage", path: "/payments", component: <PaymentsPage title={"Payments Page"}/>},
     { name: "ProductsPage", path: "/products", component: <ProductsPage title={"Products Page"}/>},
+    { name: "SignUpPage", path: "/signup", component: <SignUpPage title={"SignUp Page"}/>},
    
   ];
 
