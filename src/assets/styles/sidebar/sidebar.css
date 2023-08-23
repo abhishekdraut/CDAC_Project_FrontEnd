@@ -24,7 +24,9 @@
 .sidebar_avatar{
   margin-top: 17px;
   display: flex;
+  flex-direction: column;
   justify-content:center;
+  align-items: center;
 }
 .sidebar_item {
   width: 100%;

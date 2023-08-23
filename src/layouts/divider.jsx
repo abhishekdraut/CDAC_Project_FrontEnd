@@ -4,7 +4,7 @@ function Divider(params) {
   return (
     <>
       <div className="divider_wrapper">
-        <Header title={params.title}/>
+        <Header title={params.title} color={params?.color}/>
         {params.component}</div>
     </>
   );

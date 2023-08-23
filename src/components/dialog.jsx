@@ -9,11 +9,23 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import AddIcon from "@mui/icons-material/Add";
 import "../assets/styles/Dialog/dialog.css";
+import { useState } from "react";
+
+import { createClinet } from "../service/clients";
+import { createProducts } from "../service/products";
+import { createInvoice } from "../service/invoice";
 
 export default function ResponsiveDialog(props) {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const [apiId, setApiId] = useState(0);
+  const [inputFormData, setInputFormData] = useState({});
+  const apiObj = {
+    1: createClinet,
+    2: createProducts,
+    3: createInvoice,
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -22,6 +34,8 @@ export default function ResponsiveDialog(props) {
   const handleClose = () => {
     setOpen(false);
   };
+
+
 
   return (
     <div
@@ -50,11 +64,9 @@ export default function ResponsiveDialog(props) {
           <Button
             onClick={handleClose}
             variant="contained"
-            color={
-              props.title == "Find And Select" ? "primary" : "success"
-            }
+            color={props.title == "Find And Select" ? "primary" : "success"}
           >
-            Close
+            Submit
           </Button>
           {props.title == "Find And Select" ? (
             ""

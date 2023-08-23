@@ -227,6 +227,7 @@ export function ClientForm(params) {
               type="text"
               name="client"
               class="input"
+              id="client_name_field"
             ></input>
           </div>
 
@@ -237,6 +238,7 @@ export function ClientForm(params) {
               type="text"
               name="status"
               class="input"
+              id="client_status_field"
             ></input>
           </div>
         </div>
@@ -248,6 +250,7 @@ export function ClientForm(params) {
               type="number"
               name="mobileNumber"
               class="input"
+              id="client_phone_field"
             ></input>
           </div>
 
@@ -258,6 +261,7 @@ export function ClientForm(params) {
               type="email"
               name="email"
               class="input"
+              id="client_email_field"
             ></input>
           </div>
 
@@ -268,6 +272,7 @@ export function ClientForm(params) {
               type="text"
               name="address"
               class="input"
+              id="client_address_field"
             ></textarea>
           </div>
         </div>
@@ -279,6 +284,7 @@ export function ClientForm(params) {
               type="number"
               name="postalCode"
               class="input"
+              id="client_postal_code_field"
             ></input>
           </div>
           <div className="form_item">
@@ -288,6 +294,7 @@ export function ClientForm(params) {
               type="email"
               name="country"
               class="input"
+              id="client_country_field"
             ></input>
           </div>
           <div className="form_item">
@@ -297,6 +304,7 @@ export function ClientForm(params) {
               type="state"
               name="country"
               class="input"
+              id="client_stste_field"
             ></input>
           </div>
         </div>
