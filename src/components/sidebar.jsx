@@ -5,6 +5,7 @@ import Avatar from "@mui/material/Avatar";
 import { icons } from "../assets/img-ref/imges";
 import { Link } from "react-router-dom";
 function SideBar(params) {
+  
   return (
     <>
       <div class="sideBar_wrapper">

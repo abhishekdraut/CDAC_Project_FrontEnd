@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   background-color: #282828d1;
-  z-index: 999;
+  z-index: 1400;
 }
 .hide_loader{
   display: none;

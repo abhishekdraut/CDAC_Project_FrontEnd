@@ -1,17 +1,16 @@
 import * as React from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
 
-export default function BasicPie() {
+export default function BasicPie(props) {
+  const is=props.invoiceState;
+  const data=is?.map((item,index)=>{
+    return { id: index, value: item[0], label: item[1] }
+  })
   return (
     <PieChart
       series={[
         {
-          data: [
-            { id: 0, value: 10, label: 'paid' },
-            { id: 1, value: 15, label: 'unpaid' },
-            { id: 2, value: 20, label: 'partilly paid' },
-            { id: 2, value: 20, label: 'overdue' },
-          ],
+          data: data,
         },
       ]}
       width={400}

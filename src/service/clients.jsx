@@ -13,3 +13,10 @@ export async function createClinet(data) {
 
   return result;
 }
+
+export async function searchClientByName(id,str) {
+  const res = await axios.get(`${backendUrl}/searchClient/${id}/${str}`);
+  const result = res.data;
+
+  return result;
+}

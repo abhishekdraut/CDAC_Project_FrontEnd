@@ -16,7 +16,7 @@
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
-  gap: 41px;
+  gap: 41px !important;
   margin-top: 23px;
 }
 

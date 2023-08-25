@@ -9,7 +9,8 @@ const ReducerIndex={
     loader:loaderReducer,
     invoice:invoiceReducer,
     product:productReducer,
-    payment:paymentReducer
+    payment:paymentReducer,
+    
 }
 
 export default ReducerIndex;

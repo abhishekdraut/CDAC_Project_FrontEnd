@@ -7,12 +7,13 @@ import DynamicFormForInvcoie from "../components/form";
 import AddIcon from "@mui/icons-material/Add";
 import { useEffect, useState } from "react";
 import { fetchInvoicesByAdminId,fetchInvoicesStatByAdminId} from "../service/invoice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import actionIndex from "../features/actionIndex";
 
 function InvoicePage(params) {
   const dispatch=useDispatch();
   const [invoiceStat,setInvoiceState ]=useState([]);
+  const loader=useSelector(states=>states.loader.value);
   
   useEffect(() => {
     async function fetchInvoicesStatByAdmin() {
@@ -26,7 +27,7 @@ function InvoicePage(params) {
       }
     }
     fetchInvoicesStatByAdmin();
-  }, [setInvoiceState]);
+  }, [setInvoiceState,loader]);
 
 
   useEffect(() => {
@@ -41,7 +42,7 @@ function InvoicePage(params) {
       }
     }
     fetchInvoicesByAdmin();
-  }, [dispatch]);
+  }, [dispatch,loader]);
   
   return (
     <>

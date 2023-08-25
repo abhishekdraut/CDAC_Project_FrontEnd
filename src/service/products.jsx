@@ -13,3 +13,10 @@ export async function createProducts(data) {
 
   return result;
 }
+
+export async function searchProducts(str) {
+  const res = await axios.get(`${backendUrl}/searchProduct/${str}`);
+  const result = res.data;
+
+  return result;
+}
