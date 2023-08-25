@@ -12,6 +12,7 @@ import actionIndex from "../features/actionIndex";
 export default function ClientPage(params) {
   const dispatch=useDispatch();
   const clients = useSelector((states) => states.client.value);
+  const loader=useSelector((states)=>states.loader.value);
   useEffect(() => {
     async function fetchClientByAdmin() {
       const adminId = JSON.parse(localStorage.getItem("admin")).admin_id;
@@ -23,7 +24,7 @@ export default function ClientPage(params) {
       }
     }
     fetchClientByAdmin();
-  }, [dispatch]);
+  }, [dispatch,loader]);
 
   return (
     <>

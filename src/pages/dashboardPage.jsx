@@ -11,13 +11,19 @@ import {
   fetchInvoicesAmountStatByAdminId,
   fetchInvoicesStatByAdminId,
 } from "../service/invoice";
-
+import {  useNavigate } from "react-router-dom";
 export default function DashboardPage(params) {
   const [invoiceStat, setInvoiceState] = useState([]);
   const [invoiceAmountStat, setInvoiceAmountStat] = useState([]);
+  const navigate=useNavigate();
+  useEffect(()=>{
+    if(!JSON.parse(localStorage.getItem('admin'))){
+      navigate('/login');
+    }
+  })
   useEffect(() => {
     async function fetchInvoicesStatByAdmin() {
-      const adminId = JSON.parse(localStorage.getItem("admin")).admin_id;
+      const adminId = JSON.parse(localStorage.getItem("admin"))?.admin_id;
       try {
         const InvoiceStatData = await fetchInvoicesStatByAdminId(adminId);
         console.log(InvoiceStatData);
@@ -31,7 +37,7 @@ export default function DashboardPage(params) {
 
   useEffect(() => {
     async function fetchInvoicesAmountStatByAdmin() {
-      const adminId = JSON.parse(localStorage.getItem("admin")).admin_id;
+      const adminId = JSON.parse(localStorage.getItem("admin"))?.admin_id;
       try {
         const InvoiceAmountStatData = await fetchInvoicesAmountStatByAdminId(
           adminId
@@ -144,7 +150,7 @@ export default function DashboardPage(params) {
                 Yearly Invoice Data
               </div>
               <div className="pie_container">
-                <BasicPie />
+                <BasicPie invoiceState={invoiceStat}/>
                 <div>Invoice Overview</div>
               </div>
             </div>

@@ -2,11 +2,12 @@ import RoutesIndex from "./routes/routeIndex";
 import CircularProgress from "@mui/material/CircularProgress";
 import "./assets/styles/App/app.css";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+
 
 function App() {
   const loader = useSelector((states) => states.loader.value);
   console.log(loader);
+  
   return (
     <>
       <div

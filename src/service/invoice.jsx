@@ -20,7 +20,7 @@ export async function fetchInvoicesAmountStatByAdminId(id) {
   return result;
 }
 export async function createInvoice(data) {
-  const res = await axios.get(`${backendUrl}/invoices`,data);
+  const res = await axios.post(`${backendUrl}/invoices`,data);
   const result = res.data;
 
   return result;

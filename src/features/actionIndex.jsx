@@ -10,6 +10,7 @@ const actionIndex={
     setToggleLoader:loader,
     setInvoices:invoices,
     setProducts:product,
-    setPayments:payment
+    setPayments:payment,
+
 }
 export default actionIndex;
