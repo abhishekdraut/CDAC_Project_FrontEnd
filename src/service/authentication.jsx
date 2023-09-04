@@ -3,7 +3,7 @@ import { backendUrl } from "../config/urls";
 
 async function AuthenticateUser(username, pass) {
   console.log(username, pass, "asdasdasdas=====>");
-  const user = await axios.post(`${backendUrl}/AuthenticateAdmin`, {
+  const user = await axios.post(`${backendUrl}/Authenticate`, {
     username: username,
     password: pass,
   });
