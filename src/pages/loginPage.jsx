@@ -59,13 +59,13 @@ function LoginPage(params) {
               Integrated Advance Invoice System.
             </div>
             <div className="hero_subtext">
-              Invoicing apps let you save your business details and those of
+              <h5>Invoicing apps let you save your business details and those of
               your clients, so you can reuse them every time you create a new
-              document. The simpler ones let you put together invoices quickly
-              and keep track of everything you've invoiced in the past. More
+              document.</h5> <h4>The simpler ones let you put together invoices quickly
+              and keep track of everything you've invoiced in the past.</h4> <h3>More
               advanced apps let you collect payments online, set up payment
               reminders, and customize the way your invoices look to let your
-              professional identity shine.
+              professional identity shine.</h3>
             </div>
           </div>
           <div className="scroll_btn" style={{ zIndex: 998 }}>
